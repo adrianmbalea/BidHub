@@ -1,0 +1,100 @@
+JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.9" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {comp mainPanel::l:::x}"
+			"$verticalGroup": "par l {comp mainPanel::t:::x}"
+		} ) {
+			name: "mainFrame"
+			"background": new java.awt.Color( 255, 255, 255, 255 )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {comp leftPanel:::p::p, space s:::p, par l {seq l {comp scrollPaneSubastasActivas:::p:261:p, space s:::p, comp buttonObservar:::p:118:p}, comp labelLibrosInteresado:::p:287:p, comp labelLibrosComprados::l:p::p, comp labelSubastasActivas::l:p::p, seq l {par l:::p {comp scrollPaneTusLibros:::::x, comp scrollPaneLibrosComprados:::p:261:p}, space s:::p, par l {comp buttonAnhadirLibro:::p:118:p, comp buttonEliminar:::p:118:p}}}, space ::49:x}}"
+				"$verticalGroup": "par l {comp leftPanel::l:::x, seq l {space :p:24:p, comp labelLibrosInteresado:::p::p, par l {seq {space :::p, comp scrollPaneTusLibros:::p:117:p}, seq l {space :p:23:p, comp buttonAnhadirLibro:::p::p, space s:::p, comp buttonEliminar:::p::p}}, space s:::p, comp labelLibrosComprados:::p::p, space :::p, comp scrollPaneLibrosComprados:::p:79:p, space s:::p, comp labelSubastasActivas:::p::p, par l {seq {space :::p, comp scrollPaneSubastasActivas:::p:117:p, space ::28:x}, seq t {space ::32:x, comp buttonObservar:::p::p, space :p:94:p}}}}"
+			} ) {
+				name: "mainPanel"
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				"foreground": new java.awt.Color( 255, 255, 255, 255 )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq t {space ::55:x, par l {comp logo:::p::p, comp bidHub:::p::p}, space :p:53:p}}"
+					"$verticalGroup": "par l {seq l {space :p:81:p, comp logo:::p::p, space :p:34:p, comp bidHub:::p::p, space ::104:x}}"
+				} ) {
+					name: "leftPanel"
+					"foreground": new java.awt.Color( 51, 102, 255, 255 )
+					"background": new java.awt.Color( 51, 102, 255, 255 )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "logo"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/logo.png" )
+						auxiliary() {
+							"icon.forceValue": true
+						}
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "bidHub"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/bidhub.png" )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPaneTusLibros"
+					add( new FormComponent( "javax.swing.JList" ) {
+						name: "listLibrosInteresado"
+						"selectionMode": 0
+						"font": &Font0 new java.awt.Font( "sansserif", 0, 16 )
+					} )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "buttonEliminar"
+					"text": "Eliminar"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "eliminarLibro", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "buttonAnhadirLibro"
+					"text": "Añadir libro"
+					"font": new java.awt.Font( "sansserif", 1, 12 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "openVAnhadirLibro", true ) )
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPaneLibrosComprados"
+					"background": new java.awt.Color( 255, 255, 255, 255 )
+					add( new FormComponent( "javax.swing.JList" ) {
+						name: "listLibrosComprados"
+						"font": new java.awt.Font( "sansserif", 0, 16 )
+					} )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labelLibrosInteresado"
+					"text": "Libros interesado"
+					"font": new java.awt.Font( "sansserif", 1, 24 )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labelLibrosComprados"
+					"text": "Libros comprados"
+					"font": &Font1 new java.awt.Font( "sansserif", 1, 24 )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "buttonObservar"
+					"text": "Observar"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "observarSubasta", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labelSubastasActivas"
+					"text": "Subastas activas"
+					"font": #Font1
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPaneSubastasActivas"
+					add( new FormComponent( "javax.swing.JList" ) {
+						name: "listSubastasActivas"
+						"selectionMode": 0
+						"font": #Font0
+					} )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 30, 0 )
+			"size": new java.awt.Dimension( 830, 555 )
+		} )
+	}
+}
+

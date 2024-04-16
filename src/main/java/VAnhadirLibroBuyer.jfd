@@ -1,0 +1,56 @@
+JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.9" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {comp mainPanel::l:::x}"
+			"$verticalGroup": "par l {comp mainPanel::l:::x}"
+		} ) {
+			name: "mainFrame"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {par l {seq l {space :p:77:p, comp labelAnhadirNuevoLibro:::p::p}, seq l {space :p:29:p, par t {seq t {comp labelMaximoPagar:::p::p, space u:::p, comp textFieldMaximoPagar:::p:52:p, space :::p, comp labelEuro:::p::p, space :p:154:p}, seq t {comp labelNombreLibro:::p::p, space u:::p, comp textFieldNombreLibro:::p:220:p}}}, seq l {space :p:62:p, comp buttonAnhadir:::p:105:p, space :p:55:p, comp buttonCancelar:::p:105:p}}, space ::28:x}}"
+				"$verticalGroup": "par l {seq l {space :p:23:p, comp labelAnhadirNuevoLibro:::p::p, space :p:32:p, par b {comp labelNombreLibro::b:p::p, comp textFieldNombreLibro::b:p::p}, space s:::p, par b {comp labelMaximoPagar::b:p::p, comp textFieldMaximoPagar::b:p::p, comp labelEuro::b:p::p}, space ::32:x, par b {comp buttonAnhadir::b:p::p, comp buttonCancelar::b:p::p}, space :p:52:p}}"
+			} ) {
+				name: "mainPanel"
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textFieldNombreLibro"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labelAnhadirNuevoLibro"
+					"text": "Añadir un nuevo libro"
+					"font": new java.awt.Font( "sansserif", 1, 22 )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labelNombreLibro"
+					"text": "Nombre del libro:"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "buttonAnhadir"
+					"text": "Añadir"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "anhadir", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "buttonCancelar"
+					"text": "Cancelar"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cancelar", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textFieldMaximoPagar"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labelMaximoPagar"
+					"text": "Máximo a pagar:"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labelEuro"
+					"text": "€"
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}

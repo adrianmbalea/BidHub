@@ -1,0 +1,51 @@
+JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.9" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {comp mainPanel:::p::p, space :0:0:x}}"
+			"$verticalGroup": "par l {comp mainPanel::t:::x}"
+		} ) {
+			name: "mainFrame"
+			"background": new java.awt.Color( 255, 255, 255, 255 )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :p:33:p, par t {comp buttonVolver:::p:118:p, par l {comp labelGanador:::p::p, comp scrollPanePujas:::p:443:p, comp labelSubastaDe::l:::p}}, space :0:36:x}}"
+				"$verticalGroup": "par l {seq l {space :p:40:p, comp labelSubastaDe:::::p, space :p:36:p, comp scrollPanePujas:::p:300:p, space s:::p, comp labelGanador:::p::p, space :::p, comp buttonVolver:::p::p, space :::p}}"
+			} ) {
+				name: "mainPanel"
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				"foreground": new java.awt.Color( 255, 255, 255, 255 )
+				"font": new java.awt.Font( "sansserif", 0, 13 )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPanePujas"
+					add( new FormComponent( "javax.swing.JList" ) {
+						name: "listPujas"
+						"selectionMode": 0
+						"font": new java.awt.Font( "sansserif", 0, 16 )
+					} )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "buttonVolver"
+					"text": "Volver"
+					"font": new java.awt.Font( "sansserif", 0, 16 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "volver", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labelSubastaDe"
+					"text": " Subasta de"
+					"font": new java.awt.Font( "sansserif", 1, 26 )
+					"horizontalTextPosition": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labelGanador"
+					"text": "Ganador temporal: -"
+					"font": new java.awt.Font( "sansserif", 0, 16 )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 30, 0 )
+			"size": new java.awt.Dimension( 510, 555 )
+		} )
+	}
+}

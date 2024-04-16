@@ -1,0 +1,53 @@
+JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.9" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {comp mainPanel::t:::x}"
+			"$verticalGroup": "par l {comp mainPanel::t:::x}"
+		} ) {
+			name: "mainFrame"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {par l {seq {space :p:304:p, comp buttonVolver:::p:118:p}, seq l {space :p:31:p, par l {comp labelMiUltimaPuja:::p::p, comp labelPrecioRonda:::p::p, comp labelMaxGasto::l:p::p, comp labelSubastaLibro::l:p::p, comp labelResultado:::p::p}}}, space ::41:x}}"
+				"$verticalGroup": "par l {seq l {space :p:34:p, comp labelSubastaLibro:::p::p, space :p:30:p, comp labelPrecioRonda:::p::p, space s:::p, comp labelMaxGasto:::p::p, space s:::p, comp labelMiUltimaPuja:::p::p, space :p:30:p, comp labelResultado:::p::p, space u:::p, comp buttonVolver:::p::p, space ::39:x}}"
+			} ) {
+				name: "mainPanel"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labelSubastaLibro"
+					"text": "Subasta de Libro"
+					"font": new java.awt.Font( "sansserif", 1, 24 )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labelMaxGasto"
+					"text": "Máximo dispuesto a gastar: "
+					"font": &Font0 new java.awt.Font( "sansserif", 0, 16 )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labelPrecioRonda"
+					"text": "Precio ofrecido en esta ronda:"
+					"font": #Font0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labelResultado"
+					"text": "     Vas perdiendo la puja."
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/cruz.png" )
+					"font": new java.awt.Font( "sansserif", 0, 16 )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labelMiUltimaPuja"
+					"text": "Última puja realizada por mi:"
+					"font": #Font0
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "buttonVolver"
+					"text": "Volver"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "volver", true ) )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 465, 375 )
+		} )
+	}
+}

@@ -1,0 +1,3 @@
+# BidHub
+
+Aplicación que simula una subasta de libros mediante agentes en JADE, siguiendo el protocolo FIPA English Auction. Un agente vendedor podrá añadir libros a sus libros, y ponerlos a subasta cuando quiera. Por otra parte, un agente comprador tendrá una serie de libros en los que está interesado, por lo que si salen a subasta intentará llevárselo pujando por ellos, siempre que esté por debajo del precio máximo estipulado previamente por el usuario. La interfaz gráfica permitirá ver el estado de la subasta en tiempo real.
